@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
-public class SoundController : MonoBehaviour
+public class SoundMuter : MonoBehaviour
 {
     [SerializeField] private AudioMixerGroup _audioMixerGroup;
-
-    public void ChangeVolume(float volume)
-    {       
-        _audioMixerGroup.audioMixer.SetFloat(_audioMixerGroup.ToString(), Mathf.Log10(volume) * 20);
-    }
 
     public void ToggleMute(bool isMuted)
     {
@@ -19,7 +13,7 @@ public class SoundController : MonoBehaviour
         {
             AudioListener.volume = 0;
         }
-        else 
+        else
         {
             AudioListener.volume = 1;
         }
