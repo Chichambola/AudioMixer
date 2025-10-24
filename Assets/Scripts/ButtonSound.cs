@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button), typeof(AudioSource))]
-public class ButtonSoundEvent : MonoBehaviour
+public class ButtonSound : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
 
